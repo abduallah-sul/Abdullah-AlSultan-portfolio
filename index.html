@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ملف أعمال عبدالله السلطان - متخصص في التسويق الرقمي، تحليل البيانات، والتجارة الإلكترونية.">
+    <meta name="author" content="Abdullah Al-Sultan">
+    <meta name="keywords" content="تسويق رقمي, تحليل بيانات, تجارة إلكترونية, عبدالله السلطان">
+    <title>ملف أعمال عبدالله السلطان | متخصص التسويق الرقمي</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #F5F1E3;
+            --primary-color: #7D6E5D;
+            --accent-color: #D9D2B5;
+            --text-dark: #333;
+            --white: #ffffff;
+            --bg-light-accent: rgba(125, 110, 93, 0.05);
+            --transition-speed: 0.3s;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--bg-color) 60%, var(--accent-color) 100%);
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        .hero-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        header h1, header p, header .btns {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            max-width: 700px;
+            margin: 0 auto 10px;
+            color: var(--text-dark);
+            font-weight: 400;
+        }
+
+        .btns {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all var(--transition-speed) ease;
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-download::before {
+            content: '⬇ ';
+            margin-left: 8px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 10%;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Tools Section */
+        .bg-light {
+            background-color: var(--bg-light-accent);
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tool-item {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tool-item:hover {
+            transform: scale(1.08);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-speed) ease;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            border-bottom-color: var(--primary-color);
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        footer h2::after {
+            background: var(--white);
+        }
+
+        footer > p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            padding: 12px 28px;
+            border-radius: 25px;
+            transition: all var(--transition-speed) ease;
+            display: inline-block;
+        }
+
+        .social-link:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+        }
+
+        .social-link:focus {
+            outline: 3px solid var(--white);
+            outline-offset: 2px;
+        }
+
+        .footer-action-btn {
+            margin-top: 30px;
+        }
+
+        .footer-copy {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-color 0.2s;
+        }
+
+        .contact-info a:hover {
+            border-bottom-color: var(--white);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section { padding: 60px 5%; }
+            .hero-circle { width: 200px; height: 200px; }
+            header { padding: 30px 15px; }
+            .btns { flex-direction: column; width: 100%; max-width: 300px; }
+            .btn { width: 100%; }
+            .projects-grid { grid-template-columns: 1fr; gap: 20px; }
+            .tools-list { gap: 10px; }
+            .tool-item { font-size: 0.9rem; padding: 10px 20px; }
+            .social-links { flex-direction: column; align-items: center; }
+            .social-link { width: 100%; max-width: 280px; }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.8rem; }
+            header p { font-size: 0.95rem; }
+            h2 { font-size: 1.6rem; }
+            section { padding: 50px 5%; }
+            .card { padding: 25px; }
+            footer { padding: 50px 5%; }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header { min-height: auto; padding: 20px; }
+            .hero-circle, .btns, .footer-action-btn { display: none; }
+            section { padding: 30px 0; page-break-inside: avoid; }
+            .card { page-break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+            footer { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-circle" aria-hidden="true"></div>
+
+        <h1>عبدالله السلطان</h1>
+        <p>متخصص في التسويق الرقمي وتحليل البيانات</p>
+        <p>أجمع بين الانضباط الأكاديمي والمهارات الحديثة لتقديم حلول مبنية على البيانات</p>
+        
+        <div class="btns">
+            <a href="#projects" class="btn" aria-label="انتقل إلى قسم المشاريع">مشاهدة أعمالي</a>
+            <a href="Abdullah_Portfolio.pdf" class="btn btn-outline btn-download" download="Abdullah_AlSultan_Portfolio.pdf" aria-label="تحميل ملف PDF للسيرة الذاتية">تحميل الـ PDF</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>نبذة عني</h2>
+        <div class="about-content">
+            <p>خريج جامعة المجمعة بمرتبة الشرف الأولى والأول على الدفعة في دبلوم التجارة الإلكترونية بمعدل 4.9.</p>
+            <p>أركز في عملي على تعزيز اتخاذ القرار وتحسين العائد على الاستثمار عبر برامج Google و McKinsey.</p>
+        </div>
+    </section>
+
+    <section id="tools" class="bg-light">
+        <h2>الأدوات المستخدمة</h2>
+        <div class="tools-list">
+            <span class="tool-item">Microsoft Excel</span>
+            <span class="tool-item">Salesforce</span>
+            <span class="tool-item">Canva for Enterprise</span>
+            <span class="tool-item">Google Analytics</span>
+            <span class="tool-item">Semrush & Ahrefs</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>المشاريع العملية</h2>
+        <div class="projects-grid">
+            <article class="card">
+                <h3>مشروع مدينة هاستلتون</h3>
+                <p>حل أزمة ازدحام مروري باستخدام منهجيات McKinsey وخفض زمن التنقل بنسبة 50%.</p>
+            </article>
+            <article class="card">
+                <h3>متجر Nature's Pet</h3>
+                <p>تصميم حملات إعلانية مستهدفة واختبارات A/B Test لزيادة حركة المرور.</p>
+            </article>
+            <article class="card">
+                <h3>تحسين العائد لشركة L'Acier</h3>
+                <p>تحليل بيانات الموقع عبر Excel لتقليل الهدر المالي وتركيز الإنفاق في أوقات الذروة.</p>
+            </article>
+            <article class="card">
+                <h3>إطلاق تطبيق Zone on the Go</h3>
+                <p>حملة بريد إلكتروني (Retention) موجهة للآباء لزيادة معدل التحويل.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <h2>هل أنت مستعد لتحويل بياناتك إلى قرارات رابحة؟</h2>
+        <p>لنتحدث اليوم</p>
+        <div class="social-links">
+            <a href="mailto:abduallahsul01@gmail.com" class="social-link" aria-label="راسلني عبر البريد الإلكتروني">📧 راسلني عبر الإيميل</a>
+            <a href="tel:+966458931507" class="social-link" aria-label="اتصل بي على رقم الجوال">📱 اتصل بي مباشرة</a>
+            <a href="https://www.linkedin.com/in/abdullahalsultan1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="تواصل معي على لينكد إن">💼 حسابي على لينكدإن</a>
+        </div>
+        
+        <div class="contact-info">
+            <p>📩 البريد الإلكتروني: <a href="mailto:abduallahsul01@gmail.com">abduallahsul01@gmail.com</a></p>
+            <p>📞 الجوال: <a href="tel:+966458931507" dir="ltr">+966 45 893 1507</a></p>
+        </div>
+
+        <div class="footer-action-btn">
+            <a href="Abdullah_Portfolio.pdf" class="btn btn-outline btn-download" download="Abdullah_AlSultan_Portfolio.pdf" aria-label="تحميل ملف PDF الكامل">تحميل ملف الأعمال الكامل</a>
+        </div>
+
+        <p class="footer-copy">© 2025 عبدالله السلطان. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
